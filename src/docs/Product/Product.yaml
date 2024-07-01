@@ -1,0 +1,126 @@
+paths:
+  /api/product:
+    post:
+      summary: Crear un producto
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        201:
+          description: Producto creado correctamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        400:
+          description: Datos de producto inválidos.
+        500:
+          description: Error interno del servidor.
+
+  /api/product/mockingproducts:
+    get:
+      summary: Obtener productos de prueba (mockingproducts)
+      tags:
+        - Products
+      responses:
+        200:
+          description: Productos de prueba obtenidos correctamente.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+
+  /api/product/{productId}:
+    put:
+      summary: Actualizar un producto por su identificador.
+      tags:
+        - Products
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          description: Identificador del producto a actualizar.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        200:
+          description: Producto actualizado correctamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de respuesta.
+                    example: 'Product updated successfully'
+        500:
+          description: Error interno del servidor.
+
+    delete:
+      summary: Eliminar un producto por su identificador.
+      tags:
+        - Products
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          description: Identificador del producto a eliminar.
+          schema:
+            type: string
+      responses:
+        204:
+          description: Producto eliminado correctamente.
+        500:
+          description: Error interno del servidor.
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Título del producto.
+        description:
+          type: string
+          description: Descripción del producto.
+        price:
+          type: number
+          description: Precio del producto.
+        code:
+          type: string
+          description: Código del producto.
+        stock:
+          type: integer
+          description: Stock del producto.
+        category:
+          type: string
+          description: Categoría del producto.
+        status:
+          type: boolean
+          description: Estado del producto.
+        thumbnail:
+          type: string
+          description: Ruta del archivo de imagen del producto.
+      required:
+        - title
+        - description
+        - price
+        - code
+        - stock
+        - category
+        - status

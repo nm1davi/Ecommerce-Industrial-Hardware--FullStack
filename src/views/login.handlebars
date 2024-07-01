@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Logins</title>
+      <script src="js/script.js"></script>
+</head>
+<body onload="typeWriterLogin()">
+      <header>
+            <nav class="navegador">
+                  <div class="imgLogo">
+                    <a href="/"><img src="/img/twitter_header_photo_1.png" alt="Imagen Logo Empresa" /></a>
+                  </div>
+                </nav>
+      </header>
+      <main>
+ <div class="containerFormulario">
+      <div class="tituloMain">
+            <h1 id="demo"></h1>
+      </div>
+        <div class="contenedorSombra">
+          <div class="iconoFormulario">
+            <span><i class="bi bi-box-arrow-in-right"></i></span>
+          </div>
+          <form action="api/sessions/login" id="form" class="contacto" method="post">
+            <div class="etiquetaFormulario">
+              <label for="nombres">CORREO</label>
+              <input type="email" name="email" placeholder="Ingresar correo" required>
+            </div>
+            <div class="etiquetaFormulario">
+              <label for="celular">CONTRASEÑA</label>
+              <input type="password" name="password" placeholder="Ingrese contraseña" required>
+            </div>
+          <div class="contenedorBotonesFormulario">
+          <input  class="botonFormulario" type="submit" value="ENTRAR">
+          <a class="botonFormulario" href="/api/sessions/github">INGRESAR CON GITHUB</a>
+          <a class="botonFormulario" href="/recovery-password">OLVIDE MI CONTRASEÑA</a>
+          <a class="botonFormulario" href="/register">QUIERO REGISTRARME</a>
+          </div>
+          </form>
+        </div>
+      </div>
+      </main>
+  <footer>
+    <nav class="navegador">
+      <div class="textoFooter">
+        <h2>
+          Proyecto Backend Nicolas Davi ©
+        </h2>
+      </div>
+      <div class="iconosFooter">
+        <i class="bi bi-twitter-x"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-whatsapp"></i>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
+

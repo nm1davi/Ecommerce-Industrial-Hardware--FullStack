@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registrarse</title>
+      <script src="js/script.js"></script>
+</head>
+<body onload="typeWriterRegister()">
+      <header>
+            <nav class="navegador">
+                  <div class="imgLogo">
+                    <a href="/"><img src="/img/twitter_header_photo_1.png" alt="Imagen Logo Empresa" /></a>
+                  </div>
+                </nav>
+      </header>
+      <main>
+ <div class="containerFormulario">
+      <div class="tituloMain">
+            <h1 id="demo"></h1>
+      </div>
+        <div class="contenedorSombra">
+          <div class="iconoFormulario">
+            <span><i class="bi bi-person-circle"></i></span>
+          </div>
+          <form action="api/sessions/register" id="form" class="contacto" method="post">
+            <div class="etiquetaFormulario">
+              <label for="nombres">NOMBRE</label>
+              <input type="text" name="first_name" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="etiquetaFormulario">
+              <label for="celular">APELLIDO</label>
+              <input type="text" name="last_name" placeholder="Ingrese su apellido" required>
+            </div>
+            <div class="etiquetaFormulario">
+              <label for="celular">CORREO</label>
+              <input type="email" name="email" placeholder="Ingrese su correo" required>
+            </div>
+            <div class="etiquetaFormulario">
+              <label for="celular">CONTRASEÑA</label>
+              <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="etiquetaFormulario">
+              <label for="celular">EDAD</label>
+              <input type="number" name="age" placeholder="Ingrese su edad">
+            </div>
+          <div class="contenedorBotonesFormulario">
+          <input  class="botonFormulario" type="submit" value="REGISTRARSE">
+          <a class="botonFormulario" href="/login">QUIERO INICIAR SESION</a>
+          </div>
+          </form>
+        </div>
+      </div>
+      </main>
+  <footer>
+    <nav class="navegador">
+      <div class="textoFooter">
+        <h2>
+          Proyecto Backend Nicolas Davi ©
+        </h2>
+      </div>
+      <div class="iconosFooter">
+        <i class="bi bi-twitter-x"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-whatsapp"></i>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>
+

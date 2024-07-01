@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/efectoshoover.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Perfil Premium</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navegador">
+      <div class="imgLogo">
+        <img src="/img/twitter_header_photo_1.png" alt="Imagen Logo Empresa" />
+      </div>
+      <div class="dropdown">
+  <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Bienvenido <i class="bi bi-person-down"></i>
+  </button>
+  <ul class="dropdown-menu">
+    <li><p><strong>Nombre:</strong> {{user.firstName}}</p></li>
+    <li><p><strong>Apellido:</strong> {{user.lastName}}</p></li>
+    <li><p><strong>Email:</strong> {{user.email}}</p></li>
+    <li><p><strong>Role:</strong> {{user.role}}</p></li>
+    <li><p><strong>Edad:</strong> {{user.age}}</p></li>
+    <li><p><strong>Carrito:</strong> {{user.cart}}</p></li>
+    <ul class="menu">
+  <li>
+    <a href="/api/session/logout">
+      <span>Cerrar Sesión</span>
+      <span>
+        <i class="bi bi-box-arrow-right"></i>
+      </span>
+    </a>
+  </li>
+    </ul>
+  </ul>
+  <button class="btn btn-secondary" type="button">
+    <a class="btnContacto" href="/contact">Contacto <i class="bi bi-person-lines-fill"></i></a>
+  </button>
+  <button class="btn btn-secondary" type="button">
+    <a class="btnContacto" href="/api/product/mockingproducts">Mockingproducts <i class="bi bi-qr-code"></i></a>
+  </button>
+  <button class="btn btn-secondary" type="button">
+    <a class="btnContacto" href="/api/users/add/documents">Agregar Archivo <i class="bi bi-file-earmark-diff-fill"></i></a>
+  </button>
+  <button class="btn btn-secondary" type="button" id="cambiarRolBtn"  onclick="cambiarDeRol('{{user.id}}')">
+    Cambiar Rol <i class="bi bi-toggle-on"></i>
+  </button>
+</div>
+    </nav>
+  </header>
+  <main>
+      <div class="contenedorBotones">
+              <button class="botonDePremium" type="button">
+            <a class="" href="/api/users/premium/addProduct">AGREGAR UN PRODUCTO</a>
+            </button>
+              <button class="botonDePremium" type="button">
+            <a class="" href="/api/users/premium/deleteProduct">ELIMINAR UN PRODUCTO</a>
+            </button>
+      </div>
+      <div class="contenedorTarjetasProductos">
+      {{#each products}}
+      <div class="card" style="width: 18rem;">
+  <img src={{this.thumbnail}} class="card-img-top" alt="Imagenes de los productos">
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <p class="card-text">{{this.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class ="list-group-item"><strong>Precio:</strong> {{this.price}}</li>
+    <li class="list-group-item"><strong>Codigo:</strong> {{this.code}}</li>
+    <li class="list-group-item"><strong>Stock:</strong> <span class="stock-value">{{this.stock}}</span></li>
+    <li class="list-group-item"><strong>Categoría:</strong> {{this.category}}</li>
+    <li class="list-group-item"><strong>Estado:</strong> {{this.status}}</li>
+    <li class="list-group-item"><strong>Id Producto:</strong> {{this._id}}</li>
+    <li class="list-group-item"><strong>Owner:</strong> {{this.owner}}</li>
+  </ul>
+  <div class="card-body">
+        <ul class="menu">
+  <li>
+            <button class="boton-carrito" onclick="agregarAlCarrito('{{../user.cart}}', '{{this._id}}', '{{this.title}}', '{{../user.email}}', '{{this.owner}}')" data-hover="AGREGAR AL CARRITO" >
+              <div><span class="material-symbols-outlined">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </span></div>
+            </button>
+  </li>
+    </ul>
+        <ul class="menu">
+  <li>
+    <a href="/api/cart/{{../user.cart}}">
+      <span>Ir al Carrito</span>
+      <span>
+       <i class="bi bi-cart-fill"></i>
+      </span>
+    </a>
+  </li>
+    </ul>
+  </div>
+</div>
+{{/each}}
+      </div>
+  </main>
+  <footer>
+    <nav class="navegador">
+      <div class="textoFooter">
+        <h2>
+          Proyecto Backend Nicolas Davi ©
+        </h2>
+      </div>
+      <div class="iconosFooter">
+        <i class="bi bi-twitter-x"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-whatsapp"></i>
+      </div>
+    </nav>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+cart.yml:
+paths:
+  /api/cart/cartinfo/{cid}:
+    get:
+      summary: Obtener información de un carrito
+      tags:
+        - Carts
+      parameters:
+        - in: path
+          name: cid
+          required: true
+          description: ID del carrito a obtener
+          schema:
+            type: string
+      responses:
+        200:
+          description: Información del carrito obtenida correctamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartInfo'
+        404:
+          description: Carrito no encontrado.
+        500:
+          description: Error interno del servidor.
+
+  /api/cart:
+    post:
+      summary: Crear un nuevo carrito
+      tags:
+        - Carts
+      responses:
+        201:
+          description: Nuevo carrito creado exitosamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Nuevo carrito creado
+                  cartId:
+                    type: string
+                    example: 60f0a9c9e6b3c2b4b8a6b2a0
+        500:
+          description: Error interno del servidor.
+
+
+components:
+  schemas:
+    CartInfo:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: ID del carrito
+          example: 65de3f0c7883239cb0131b78
+        productos:
+          type: array
+          description: Lista de productos en el carrito
+          items:
+            type: object
+            properties:
+              product:
+                $ref: '#/components/schemas/Product'
+              quantity:
+                type: integer
+                description: Cantidad del producto en el carrito
+                example: 1
+
+    Product:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: ID del producto
+        title:
+          type: string
+          description: Título del producto
+        description:
+          type: string
+          description: Descripción del producto
+        price:
+          type: number
+          description: Precio del producto
+        thumbnail:
+          type: string
+          description: Imagen del producto
+        code:
+          type: string
+          description: Codigp del producto
+        stock:
+          type: number
+          description: Stock del producto
+        category:
+          type: string
+          description: Categoria del producto
+        status:
+          type: boolean
+          description: Estado del producto
+      example:
+        _id: 6570dc41013bded134862cba
+        title: Amoladora Bosch
+        description: Amoladora 7''  
+        price: 80693
+        thumbnail: /img/AmoladoraBosch7.jpg
+        code: ABS7
+        stock: 11
+        category: Amoladoras
+        status: true
+

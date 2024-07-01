@@ -1,0 +1,461 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Teko&display=swap');
+
+body{
+    background-color: rgb(214, 214, 214); 
+}
+
+/* Estilos de header */
+header{
+    background-color: rgb(200, 203, 204);
+    border-radius: 1rem;
+    -webkit-box-shadow: -14px 0px 25px 5px rgba(0,0,0,0.78);
+    -moz-box-shadow: -14px 0px 25px 5px rgba(0,0,0,0.78);
+    box-shadow: -14px 0px 25px 5px rgba(0,0,0,0.78);
+}
+.navegador{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.botonesHeader ul, li{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+.imgLogo img{
+    object-fit: contain;
+    width: 55%;
+}
+.contenedorBotonesHeader{
+    margin-right: 1rem;
+}
+
+.anclas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.btnContacto{
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Estilos de main */
+main{
+    width: 100%;
+}
+.totalDeTarjeta {
+  width: auto;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.totalTexto {
+  background-color: red;
+}
+
+.menu ul{
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem auto !important;
+  padding: 0 !important ;
+}
+.contenedorMain{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.swiffy-slider,
+.contenedorImgMain {
+  flex: 0 0 48%; 
+  margin-bottom: 1rem
+}
+
+
+.contenedorMain img,
+.contenedorImgMain img {
+    border-radius: 1rem;
+    width: 90%; /* Ajustar el ancho de las imágenes al contenedor */
+    height: auto;
+}
+.contenedorImgMain{
+    position: relative;
+}
+.dropdown{
+  margin-right: 2rem;
+}
+.dropdown-menu{
+  width: 30rem !important;
+}
+
+.dropdown-menu p{
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+.dropdown-menu button{
+  margin-left: 1rem;
+}
+
+.dropdown-menu a{
+  text-decoration: none !important;
+}
+
+.contenedorImgMain .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    width: 90%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+.content{
+    margin-left: 5%;
+    margin-bottom: 0.4rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+}
+.content h1, p{
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+.contenedorTarjetasProductos{
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.card{
+  margin: 1rem !important;
+}
+.card img{
+  object-fit: contain;
+  width: 60%;
+  margin: 0 auto;
+}
+.card-text{
+  color: #000000 !important;
+}
+.stock-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contenedorBotones{
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.botonDePremium{
+  border: none !important;
+  border-radius: 0.5rem;
+  background-color: #6c757d;
+}
+
+.botonDePremium a{
+  text-decoration: none !important;
+  color: white;
+}
+
+/* Estilos Footer */
+
+footer{
+    background-color: rgb(200, 203, 204);
+    border-radius: 1rem;
+    -webkit-box-shadow: -14px 0px 25px 5px rgba(0,0,0,0.78);
+    -moz-box-shadow: -14px 0px 25px 5px rgba(0,0,0,0.78);
+    box-shadow: -14px 0px 25px 5px rgba(0,0,0,0.78);
+
+}
+
+.textoFooter h2{
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+.iconosFooter i{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/* Estilos para register */
+.containerFormulario {  
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+
+
+/* Estilos para Register */
+
+  .contenedorSombra{
+    margin: 1rem;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: transparent;
+    display: flex;
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #084D68;
+    font-family: 'Amaranth', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Titillium Web', sans-serif;
+font-size: 1.5rem;
+font-weight: bold;
+position: relative;
+z-index: 1;
+  }
+
+  .iconoFormulario{
+    border-top-left-radius: 15px;
+    width: 100%;
+    background-color: #007386;
+    text-align: center;
+  }
+  .iconoFormulario span{
+    color: white ;
+    font-size: 10rem;
+  }
+
+  .contacto{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+  }
+.contacto textarea{
+    border: none;
+    border-bottom: 6px double #677A86;
+    background-color: #E1F1EE;
+
+  }
+
+  .contacto label{
+    background-color: #497E9B;
+  }
+
+  .etiquetaFormulario{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px;
+  }
+
+  .botonFormulario{
+    font-family: 'Amaranth', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    border: thick double #000000;
+    border-radius: 15px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-out ;
+    color:#c4c4c4;
+    padding: 0.5rem;
+  }
+  .botonFormulario:hover{
+    background-color: #CBF7FF;
+    color: rgb(99, 99, 99);
+  }
+
+  .tituloMain{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .contenedorBotonesFormulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .contenedorBotonesFormulario a{
+    text-decoration: none;
+  }
+
+  /* Estilo para el Carrito */
+  .contenedorCarrito {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 0.2fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    align-items: stretch;
+    grid-template-areas:
+      "contenedorDescripcion"
+      "contenedorTotal";
+    width: 100%;
+  }
+  
+  .contenedorDescripcion { 
+    grid-area: contenedorDescripcion; 
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    height: auto;
+  }
+  
+  .contenedorTotal { 
+    grid-area: contenedorTotal;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cff4fc;
+    border-radius: 1rem;
+  }
+  .contenedorTotal h1{
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .botonesDeTotal{
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    margin-right: 7rem;
+  }
+
+  .contenedorBotonesTabla{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .encabezado{
+    text-decoration: underline;
+    text-align: center;
+  }
+  .total{
+    font-family: 'Fira Sans', sans-serif;
+}
+.totalDeTotales{
+  margin-left: 0.5rem;
+}
+td{
+  text-align: center;
+}
+.carritoVacio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.carritoVacio a{
+  text-decoration: none;
+}
+
+/* Estilo del admin */
+.mainAdmin{
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* Estilos originales */
+
+/* Media query para iPad (1024 x 1366) */
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  body {
+      background-color: rgb(214, 214, 214);
+  }
+  header {
+    background-color: rgb(200, 203, 204);
+    border-radius: 1rem;
+    -webkit-box-shadow: -14px 0px 25px 5px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: -14px 0px 25px 5px rgba(0, 0, 0, 0.78);
+    box-shadow: -14px 0px 25px 5px rgba(0, 0, 0, 0.78);
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botonesHeader ul,
+.botonesHeader li {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem; /* Reducir el margen para ajustar mejor los botones */
+}
+
+.botonesHeader li {
+    padding: 0.5rem; /* Añadir un padding para separar los botones */
+}
+
+.imgLogo img {
+    object-fit: contain;
+    width: 55%;
+}
+
+.contenedorBotonesHeader {
+    margin-right: 1rem;
+    overflow-x: auto; /* Permitir el desplazamiento horizontal si es necesario */
+}
+
+.anclas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.btnContacto {
+    color: white !important;
+    text-decoration: none !important;
+}
+}
+
+/* Media query para iPhone (430 x 932) */
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+  .imgLogo img {
+    width: 10rem; /* Aumentar el tamaño del logo para iPhone */
+    max-width: 200px; /* Establecer un tamaño máximo para asegurar visibilidad */
+}
+.botonesHeader ul {
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en múltiples líneas */
+    justify-content: center; /* Centrar los botones */
+}
+.botonesHeader li {
+    flex: 0 0 auto; /* Evitar que los botones se expandan más allá de su contenido */
+}
+.swiffy-slider, .contenedorImgMain{
+  flex: 0 0 48%;
+  margin-bottom: 1rem;
+}
+.contenedorMain img, .contenedorImgMain img{
+  object-fit: cover;
+  border-radius: 1rem;
+  width: 90%;
+  height: 30rem;
+}
+}
