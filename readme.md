@@ -81,7 +81,7 @@ Este proyecto es un E-commerce de ferretería industrial desarrollado utilizando
 ### Despliegue
 
 - **Despliegue en Railway.app**:
-   - La aplicación está desplegada en Railway.app y puede ser visitada en [este enlace](https://segunda-entrega-integradora-production.up.railway.app).
+   - La aplicación está desplegada en Railway.app y puede ser visitada en [este enlace](https://ecommerce-industrial-hardware-fullstack.onrender.com).
 
 ## Instrucciones de Instalación
 
@@ -89,10 +89,10 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 1. Clona este repositorio.
    ```bash
-   git clone https://github.com/nm1davi/Desarrollo-FullStack-Ecommerce.git
+   git clone https://github.com/nm1davi/Ecommerce-Industrial-Hardware--FullStack.git
 2. Navega al directorio del proyecto.
    ```bash
-   cd nombre-del-proyecto
+   cd Segunda Entrega Integradora
 3. Instala las dependencias.
    ```bash
    npm install
